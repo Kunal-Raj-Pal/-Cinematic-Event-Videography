@@ -1,9 +1,43 @@
 import annu from "../assets/img/ProfileImg/Annu.jpg";
 
-function About() {
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
+
+function About({dslrRef}) {
+
+    const aboutRef = useRef();
+    const apRef = useRef();
+
+  useGSAP(()=>{
+    let at = gsap.timeline({
+      scrollTrigger: {
+        trigger: aboutRef.current,
+        start:"top 20%",
+        end: "bottom 60%",
+        scrub:2,
+        // markers: true,
+      }
+    });
+
+      at.to(dslrRef.current,{
+        rotate: 180,
+        y: 2010,
+      })
+      .to(dslrRef.current,{
+        rotate: 360,
+        y:2630,
+        scale: 1.15,
+      })
+  });
+
   return (
     <>
-      <section id="about" className="py-20 bg-gray-50">
+      <section ref={aboutRef} id="about" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-up">
@@ -11,7 +45,7 @@ function About() {
                 Behind the <span className="bg-purple-600">Lens</span>
               </h2>
 
-              <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <div ref={apRef} className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
                   With over a decade of experience capturing life's most
                   precious moments,{" "}
@@ -74,7 +108,7 @@ function About() {
                   alt="Professional videographer"
                   className="w-full rounded-2xl shadow-2xl"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-purple-600 text-white p-6 rounded-2xl shadow-xl animate-bounce">
+                <div className="absolute bottom-0 top-45 -right-6 bg-purple-600 text-white p-4 rounded-2xl shadow-xl ">
                   <div className="font-serif font-bold text-lg">
                     Anurag Singh
                   </div>

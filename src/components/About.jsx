@@ -25,12 +25,8 @@ function About({dslrRef}) {
     });
 
       at.to(dslrRef.current,{
-        rotate: 180,
-        y: 2010,
-      })
-      .to(dslrRef.current,{
         rotate: 360,
-        y:2630,
+        y: "382vh",
         scale: 1.15,
       })
   });

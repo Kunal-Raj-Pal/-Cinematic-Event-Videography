@@ -40,52 +40,21 @@ function Potfolio({dslrRef}) {
 
 
   const portfolioRef = useRef();
-  const pRef = useRef();
 
   useGSAP(()=>{
     let lt = gsap.timeline({
       scrollTrigger: {
         trigger: portfolioRef.current,
         start:"top 20%",
-        // endTrigger: pRef.current,
-        end: "bottom 96%",
+        end: "bottom 40%",
         scrub:2,
-        markers: true,
+        // markers: true,
       }
     });
 
       lt.to(dslrRef.current,{
-        scale: .2,
-        x: -100,
-        y:700,
-      })
-      .to(dslrRef.current,{
-        x: -144,
-        scale: .15,
-      })
-      .to(dslrRef.current,{
-        y:910,
-      })
-      .to(dslrRef.current,{
-        x: 180,
-      })
-      .to(dslrRef.current,{
-        y:1110,
-      })
-      .to(dslrRef.current,{
-        x: -144,
-      })
-      .to(dslrRef.current,{
-        y:1320,
-      })
-      // .to(dslrRef.current,{
-      //   x: 20,
-      // })
-      .to(dslrRef.current,{
-        x:50,
-        y: 1395,
-        scale: 1,
-        rotate: 10,
+        rotate: 372,
+        y: "203vh",
       })
   });
 
@@ -98,7 +67,7 @@ function Potfolio({dslrRef}) {
             <h2 className="font-serif font-black text-4xl md:text-5xl text-gray-800 mb-6">
               Our <span className="bg-purple-600">Portfolio</span>
             </h2>
-            <p ref={pRef} className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Each project tells a unique story. Discover how{" "}
               <span className="bg-purple-300">
                 we capture the essence of every moment.

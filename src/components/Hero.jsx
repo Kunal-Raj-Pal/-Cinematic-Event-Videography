@@ -30,8 +30,8 @@ useGSAP(() => {
 
   tl.to(dslrRef.current,{
     rotate: 25,
-    y: 455,
-    x: 55,
+    y: "66vh",
+    x: "12vw",
     scale: .9,
   })
 });

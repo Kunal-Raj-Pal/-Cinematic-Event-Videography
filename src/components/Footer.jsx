@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <footer className="bg-gray-800 text-white py-16">
+      <footer className="bg-white/10 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
@@ -20,13 +20,10 @@ function Footer() {
               <div className="flex gap-4">
                 <a
                   href="https://www.instagram.com/anurag_video_mixing_zone?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  className="bg-gray-700 p-2 rounded-full hover:bg-purple-600 transition-colors"
+                  className="bg-gray-700 p-2 rounded-full hover:bg-red-600 transition-colors"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
-                {/* <a href="#" className="bg-gray-700 p-2 rounded-full hover:bg-purple-600 transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a> */}
               </div>
             </div>
 
@@ -34,27 +31,27 @@ function Footer() {
               <h4 className="font-serif font-bold text-lg mb-4">Services</h4>
               <ul className="space-y-2 text-gray-300">
                 <li>
-                  <p className="hover:text-purple-400 transition-colors">
+                  <p className="hover:text-red-400 transition-colors">
                     Wedding Videography
                   </p>
                 </li>
                 <li>
-                  <p className="hover:text-purple-400 transition-colors">
+                  <p className="hover:text-red-400 transition-colors">
                     Corporate Events
                   </p>
                 </li>
                 <li>
-                  <p className="hover:text-purple-400 transition-colors">
+                  <p className="hover:text-red-400 transition-colors">
                     Commercial Videos
                   </p>
                 </li>
                 <li>
-                  <p className="hover:text-purple-400 transition-colors">
+                  <p className="hover:text-red-400 transition-colors">
                     Documentary Films
                   </p>
                 </li>
                 <li>
-                  <p className="hover:text-purple-400 transition-colors">
+                  <p className="hover:text-red-400 transition-colors">
                     Highlight Reels
                   </p>
                 </li>
@@ -67,7 +64,7 @@ function Footer() {
                 <li>
                   <Link
                     to="/Portfolio"
-                    className="hover:text-purple-400 transition-colors"
+                    className="hover:text-red-400 transition-colors"
                   >
                     Portfolio
                   </Link>
@@ -75,7 +72,7 @@ function Footer() {
                 <li>
                   <Link
                     to="/About"
-                    className="hover:text-purple-400 transition-colors"
+                    className="hover:text-red-400 transition-colors"
                   >
                     About
                   </Link>
@@ -83,7 +80,7 @@ function Footer() {
                 <li>
                   <Link
                     to="/Contact"
-                    className="hover:text-purple-400 transition-colors"
+                    className="hover:text-red-400 transition-colors"
                   >
                     Contact
                   </Link>
@@ -97,7 +94,11 @@ function Footer() {
             © 2025 - <span className="font-bold">Anurag Video Mixing Zone</span>
             . <br />
             Designed & Developed with ❤️ by{" "}
-            <a target="_blank" href="https://www.linkedin.com/in/kunal-raj-pal">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/kunal-raj-pal"
+              className="text-red-300 hover:text-red-400 trasition-all duration-300"
+            >
               Kunal Raj Pal
             </a>
           </p>

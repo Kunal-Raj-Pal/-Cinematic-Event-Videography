@@ -1,3 +1,5 @@
-.cam{
-    filter: drop-shadow(5px 5px 10px #22222286);
+body,html{
+    background-color: rgb(16, 16, 17);
+    color: white;
+    overflow-x: hidden;
 }

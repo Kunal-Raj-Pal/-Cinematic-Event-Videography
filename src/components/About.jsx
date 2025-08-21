@@ -1,61 +1,28 @@
 import annu from "../assets/img/ProfileImg/Annu.jpg";
 
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(useGSAP);
-
-function About({dslrRef}) {
-
-    const aboutRef = useRef();
-    const apRef = useRef();
-
-  useGSAP(()=>{
-    let at = gsap.timeline({
-      scrollTrigger: {
-        trigger: aboutRef.current,
-        start:"top 20%",
-        end: "bottom 60%",
-        scrub:2,
-        // markers: true,
-      }
-    });
-
-      at.to(dslrRef.current,{
-        rotate: 360,
-        y: "382vh",
-        scale: 1.15,
-      })
-  });
-
+function About({ dslrRef }) {
   return (
     <>
-      <section ref={aboutRef} id="about" className="py-20 bg-gray-50">
+      <section id="about" className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-up">
-              <h2 className="font-serif font-black text-4xl md:text-5xl text-gray-800 mb-8">
-                Behind the <span className="bg-purple-600">Lens</span>
+              <h2 className="font-serif font-black text-4xl md:text-5xl text-white mb-8">
+                Behind the <span className="bg-red-600">Lens</span>
               </h2>
 
-              <div ref={apRef} className="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
                 <p>
                   With over a decade of experience capturing life's most
-                  precious moments,{" "}
-                  <span className="bg-purple-300">
-                    I believe that every story deserves to be told with artistry
-                    and authenticity.
-                  </span>
+                  precious moments, I believe that every story deserves to be
+                  told with artistry and authenticity.
                 </p>
 
                 <p>
-                  My approach combines{" "}
-                  <span className="bg-purple-300">
-                    cinematic techniques with documentary-style storytelling,{" "}
-                  </span>
+                  <span className="bg-red-400 text-gray-300">
+                    My approach combines cinematic techniques with
+                    documentary-style storytelling,
+                  </span>{" "}
                   ensuring that your memories are preserved not just as videos,
                   but as emotional experiences that transport you back to those
                   perfect moments.
@@ -68,29 +35,29 @@ function About({dslrRef}) {
                 </p>
               </div>
 
-              <div class="absolute w-32 h-32 bg-purple-500 rounded-lg blur-3xl"></div>
-              <div className="mt-12 grid grid-cols-3 gap-8 bg-black/10 p-3 rounded-xl shadow-lg">
+              <div class="absolute w-32 h-32 bg-red-500 rounded-lg blur-3xl"></div>
+              <div className="mt-12 grid grid-cols-3 gap-8 bg-white/10 p-3 rounded-lg shadow-lg">
                 <div className="text-center">
-                  <div className="font-serif font-black text-3xl text-purple-600 mb-2">
+                  <div className="font-serif font-black text-3xl text-red-600 mb-2">
                     100+
                   </div>
-                  <div className="text-sm text-gray-600 font-medium">
+                  <div className="text-sm text-gray-400 font-medium">
                     Weddings Filmed
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="font-serif font-black text-3xl text-purple-600 mb-2">
+                  <div className="font-serif font-black text-3xl text-red-600 mb-2">
                     7+
                   </div>
-                  <div className="text-sm text-gray-600 font-medium">
+                  <div className="text-sm text-gray-400 font-medium">
                     Years Experience
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="font-serif font-black text-3xl text-purple-600 mb-2">
+                  <div className="font-serif font-black text-3xl text-red-600 mb-2">
                     10k+
                   </div>
-                  <div className="text-sm text-gray-600 font-medium">
+                  <div className="text-sm text-gray-400 font-medium">
                     All Social Media Followers
                   </div>
                 </div>
@@ -104,7 +71,7 @@ function About({dslrRef}) {
                   alt="Professional videographer"
                   className="w-full rounded-2xl shadow-2xl"
                 />
-                <div className="absolute bottom-0 top-45 -right-6 bg-purple-600 text-white p-4 rounded-2xl shadow-xl ">
+                <div className="absolute -bottom-7 -right-6 bg-red-600 text-white p-6 rounded-2xl shadow-[0_0_15px_#ff0000]">
                   <div className="font-serif font-bold text-lg">
                     Anurag Singh
                   </div>

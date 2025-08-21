@@ -9,17 +9,17 @@ function Nav() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/10 rounded-xl backdrop-blur-sm transition-transform duration-300">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/10 rounded-xl backdrop-blur-sm transition-transform duration-300 overflowX-hidden">
         <div className=" mx-auto sm:px-6 sm:py-4">
           <div className="flex items-center justify-between p-4 sm:p-0">
-            <div className="font-serif font-black sm:text-2xl text-gray-800">
+            <div className="font-serif font-black sm:text-2xl text-red-500">
               Anurag Video Mixing Zone
             </div>
 
             <div className="hidden md:flex items-center gap-8">
               <Link
                 to={"/"}
-                className="text-gray-600 hover:text-purple-600 transition-colors font-medium"
+                className="text-white hover:text-red-600 transition-colors font-medium"
               >
                 {" "}
                 Home
@@ -27,21 +27,21 @@ function Nav() {
 
               <Link
                 to={"/Portfolio"}
-                className="text-gray-600 hover:text-purple-600 transition-colors font-medium"
+                className="text-white hover:text-red-600 transition-colors font-medium"
               >
                 Portfolio
               </Link>
 
               <Link
                 to={"/About"}
-                className="text-gray-600 hover:text-purple-600 transition-colors font-medium"
+                className="text-white hover:text-red-600 transition-colors font-medium"
               >
                 About
               </Link>
 
               <Link
                 to={"/Contact"}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-6"
+                className="bg-red-600 hover:bg-red-700 text-white px-6 p-1 rounded-lg"
               >
                 Contact
               </Link>
@@ -52,18 +52,18 @@ function Nav() {
             <div className="md:hidden">
               <button onClick={tooggleMenu}>
                 {isOpen ? (
-                  <XIcon className="w-6 h-6" />
+                  <XIcon className="w-6 h-6 text-red-800" />
                 ) : (
-                  <CameraIcon className="w-6 h-6" />
+                  <CameraIcon className="w-6 h-6 text-red-800" />
                 )}
               </button>
             </div>
 
             {isOpen && (
-              <div className="absolute top-full left-0 w-full bg-gray-200 transition-all duration-300  flex flex-col items-center gap-5 py-6 md:hidden">
+              <div className="absolute top-full left-0 w-full bg-black/80 transition-all duration-300  flex flex-col items-center gap-5 py-6 md:hidden border border-red-500  border-2 border-t-0 rounded-xl shadow-xl">
                 <Link
                   to={"/"}
-                  className="text-gray-600 hover:text-purple-600 transition-colors font-medium"
+                  className="text-white hover:text-red-600 transition-colors font-medium"
                   onClick={tooggleMenu}
                 >
                   {" "}
@@ -72,7 +72,7 @@ function Nav() {
 
                 <Link
                   to={"/Portfolio"}
-                  className="text-gray-600 hover:text-purple-600 transition-colors font-medium"
+                  className="text-white hover:text-red-600 transition-colors font-medium"
                   onClick={tooggleMenu}
                 >
                   Portfolio
@@ -80,7 +80,7 @@ function Nav() {
 
                 <Link
                   to={"/About"}
-                  className="text-gray-600 hover:text-purple-600 transition-colors font-medium"
+                  className="text-white hover:text-red-600 transition-colors font-medium"
                   onClick={tooggleMenu}
                 >
                   About
@@ -88,7 +88,7 @@ function Nav() {
 
                 <Link
                   to={"/Contact"}
-                  className="bg-purple-600 hover:bg-purple-700 text-white px-6"
+                  className="bg-red-600 hover:bg-red-700 text-white px-6 p-1 rounded-lg"
                   onClick={tooggleMenu}
                 >
                   Contact

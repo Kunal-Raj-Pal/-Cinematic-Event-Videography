@@ -1,98 +1,110 @@
 import Potfolio from "./Potfolio";
 import About from "./About";
 import Contact from "./Contact";
+import cam from "../assets/img/ProfileImg/dslr.png";
+import {
+  ClapperboardIcon,
+  FilmIcon,
+  Music4Icon,
+  SlidersIcon,
+} from "lucide-react";
 
-import { useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
-function Hero({ dslrRef }) {
-  const h1Ref = useRef(null);
-  const button1Ref = useRef();
-  const button2Ref = useRef();
-  const pRef = useRef();
-  
-useGSAP(() => {
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: h1Ref.current,
-      start: "top 10%",
-      endTrigger: button1Ref.current,
-      end: "bottom 50%",
-      scrub: 2,
-      // markers: true,
-    },
+function Hero() {
+  const camRef = useRef();
+
+  useGSAP(() => {
+    gsap.to(camRef.current, {
+      rotateY: 15,
+      scrollTrigger: {
+        trigger: camRef.current,
+        start: "top 10%",
+        end: "bottom 80%",
+        // markers: true,
+        scrub: 2,
+      },
+    });
   });
-
-  tl.to(dslrRef.current,{
-    rotate: 25,
-    y: "66vh",
-    x: "12vw",
-    scale: .9,
-  })
-});
-
-
-
 
   return (
     <>
       {/* ---------------------- Hero Start ------------------------ */}
-<section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden">
-        {/* Content */}
-        <div class="absolute w-32 h-32 bg-purple-500 rounded-full blur-2xl animate-pulse"></div>
-        <div className="home bg-white/10  backdrop-blur-md relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in-up">
-          <h1 ref={h1Ref} className="font-serif font-black text-5xl md:text-7xl text-gray-800 mb-6 leading-tight">
-            Crafting Timeless
-            <span className="block text-purple-600">Memories</span>
-            <span className="block text-4xl md:text-5xl font-normal">
-              Through the Lens
-            </span>
-            {/* <img ref={dslrRef} src={dslr} alt="dslr" className="cam absolute z-10 w-50 h-50 top-20 left-15 sm:left-50 sm:top-0 md:top-15 md:left-135"/> */}
-          </h1>
-
-          <p ref={pRef} className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Elegant videography for your most cherished moments. Your story,
-            beautifully told.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a ref={button1Ref}
-              href="https://www.instagram.com/anurag_video_mixing_zone?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              size="lg"
-              className="bg-gradient-to-br from-purple-500/90 to-purple-700/70 backdrop-blur-md rounded-xl hover:bg-purple-700/70 transition duration-300 px-8 py-4 text-lg text-white"
-              target="_blank"
-            >
-              View Our Work
-            </a>
-
-            <a ref={button2Ref}
-              href="https://www.instagram.com/anu_pixelverse?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              variant="outline"
-              size="lg"
-              className="border-gray-300 rounded-xl text-gray-700 hover:bg-gray-500 hover:text-white transition-all duration-200 px-8 py-4 text-lg flex items-center gap-2 bg-transparent border border-grey-300 border-2"
-              target="_blank"
-            >
-              Watch Reel
-            </a>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+      <section className="hero py-20">
+        <div className="container max-w-7xl mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-2 md:gap-12 items-center mt-6">
+            <div className="space-y-5 md:space-y-8">
+              <h1 className="md:text-5xl lg:text-6xl font-bold leading-tight">
+                Anurag Video <br />
+                <span className="text-primary">Mixing Zone</span>
+              </h1>
+              <p className="text-sm font-thin md:text-xl  text-gray-400">
+                Premium Videography & Photography for Weddings, <br /> Events
+                and More.
+              </p>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/anurag_video_mixing_zone?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                className=" bg-red-600 hover:bg-red/90 px-4 py-2 md:px-9 md:py-4 text-lg font-semibold rounded-lg shadow-[0_0_15px_#ff0000] transition-all duration-300 hover:shadow-[0_0_30px_#ff0000] hover:scale-105"
+              >
+                Get started
+              </a>
+            </div>
+            <div className="relative inline-block">
+              <img
+                ref={camRef}
+                src={cam}
+                alt="Professional DSLR Camera"
+                className="scale-125 md:scale-100 md:w-full md:h-auto rounded-lg"
+              />
+              <div className="absolute -top-5 -right-15 md:top-1/4 md:right-0 w-[200px] h-[200px] md:w-[300px] md:h-[300px] bg-red-500 rounded-full blur-[120px] opacity-60 mix-blend-screen"></div>
+            </div>
           </div>
         </div>
       </section>
+
+      <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-3 md:gap-5">
+        <div className="card left bg-white/10 flex justify-evenly p-1 md:p-6">
+          <div className="flex flex-col items-center">
+            <FilmIcon className="w-20 h-20 md:w-30 md:h-30 text-red-600 drop-shadow-[0_0_8px_#ff0000]" />
+            <h1 className="md:text-2xl">Video Editing</h1>
+            <p className="text-center text-gray-400">
+              Editing High Quality Videos
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <SlidersIcon className="w-20 h-20 md:w-30 md:h-30 text-red-600 drop-shadow-[0_0_8px_#ff0000]" />
+            <h1 className="md:text-2xl">Video Mixing</h1>
+            <p className="text-center text-gray-400">
+              Have Great Skills in Video Mixing
+            </p>
+          </div>
+        </div>
+        <div className="card right bg-white/10 flex justify-evenly p-1 md:p-6">
+          <div className="flex flex-col items-center">
+            <Music4Icon className="w-20 h-20 md:w-30 md:h-30 text-red-600 drop-shadow-[0_0_8px_#ff0000]" />
+            <h1 className="md:text-2xl">Background Score</h1>
+            <p className="text-center text-gray-400 text-center">
+              Perfect Background Scores
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <ClapperboardIcon className="w-20 h-20 md:w-30 md:h-30 text-red-600 drop-shadow-[0_0_8px_#ff0000]" />
+            <h1 className="md:text-2xl">Wedding/Events</h1>
+            <p className="text-center text-gray-400">Best Moment Compiled</p>
+          </div>
+        </div>
+      </div>
       {/* ---------------------- Hero End ------------------------ */}
 
-      <Potfolio dslrRef={dslrRef} />
-      <About dslrRef={dslrRef}  />
+      <Potfolio />
+      <About />
       <Contact />
     </>
   );

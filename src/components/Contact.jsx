@@ -29,13 +29,13 @@ function Contact() {
 
   return (
     <>
-      <section id="contact" className="py-20 bg-gray-50">
+      <section id="contact" className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="font-serif font-black text-4xl md:text-5xl text-gray-800 mb-6">
-              Let's <span className="bg-purple-600">Create</span> Together
+            <h2 className="font-serif font-black text-4xl md:text-5xl text-white mb-6">
+              Let's <span className="bg-red-600">Create</span> Together
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Ready to tell your story? Get in touch and let's discuss how we
               can capture your special moments.
             </p>
@@ -46,18 +46,18 @@ function Contact() {
             <form onSubmit={onSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-600 mb-2">
                     Your Name
                   </label>
                   <input
                     name="name"
                     placeholder="Your Name"
                     required
-                    className="border border-gray-300 ps-2 p-1 border-rounded-xl  rounded-lg focus:border-purple-500 focus:ring-purple-500"
+                    className="bg-white/10 ps-2 p-1 border-rounded-xl  rounded-lg focus:border-red-500 focus:ring-red-500"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-600 mb-2">
                     Email Address
                   </label>
                   <input
@@ -65,36 +65,36 @@ function Contact() {
                     type="email"
                     placeholder="email@example.com"
                     required
-                    className="border border-gray-300 ps-2 p-1 border-rounded-xl rounded-lg focus:border-purple-500 focus:ring-purple-500"
+                    className="bg-white/10 ps-2 p-1 ps-2 p-1 border-rounded-xl rounded-lg focus:border-red-500 focus:ring-red-500"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-600 mb-2">
                     Event Date
                   </label>
                   <input
                     name="eventDate"
                     type="date"
-                    className="border border-gray-300 ps-2 p-1 border-rounded-xl rounded-lg focus:border-purple-500 focus:ring-purple-500"
+                    className="bg-white/10 ps-2 p-1 ps-2 p-1 border-rounded-xl rounded-lg focus:border-red-500 focus:ring-red-500"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-600 mb-2">
                     Event Type
                   </label>
                   <input
                     name="eventType"
                     placeholder="Wedding, Corporate, etc."
-                    className="border border-gray-300 ps-2 p-1 rounded-lg rounded-lg focus:border-purple-500 focus:ring-purple-500"
+                    className="bg-white/10 ps-2 p-1 ps-2 p-1 rounded-lg rounded-lg focus:border-red-500 focus:ring-red-500"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-600 mb-2">
                   Tell us about your vision
                 </label>
                 <textarea
@@ -102,13 +102,13 @@ function Contact() {
                   name="message"
                   placeholder="Share details about your event, style preferences, and any special moments you'd like us to capture..."
                   rows={5}
-                  className=" w-72 border border-gray-300 ps-2 p-1 border-rounded-xl rounded-lg focus:border-purple-500 focus:ring-purple-500 p-2"
+                  className=" w-72 bg-white/10 ps-2 p-1 ps-2 p-1 border-rounded-xl rounded-lg focus:border-red-500 focus:ring-red-500 p-2"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 text-lg flex items-center justify-center gap-2 rounded-xl"
+                className="w-full bg-red-600 hover:bg-red-600 text-white py-3 text-lg flex items-center justify-center gap-2 rounded-xl  shadow-[0_0_10px_#ff0000] hover:shadow-[0_0_20px_#ff0000] transition-all duration-300"
               >
                 <Send className="w-5 h-5" />
                 Send Message
@@ -130,8 +130,8 @@ function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="bg-purple-100 p-3 rounded-full">
-                    <Mail className="w-6 h-6 text-purple-600" />
+                  <div className="bg-red-100 p-3 rounded-full">
+                    <Mail className="w-6 h-6 text-red-600" />
                   </div>
                   <div>
                     <div className="font-medium text-gray-800">Email</div>
@@ -142,8 +142,8 @@ function Contact() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="bg-purple-100 p-3 rounded-full">
-                    <Phone className="w-6 h-6 text-purple-600" />
+                  <div className="bg-red-100 p-3 rounded-full">
+                    <Phone className="w-6 h-6 text-red-600" />
                   </div>
                   <div>
                     <div className="font-medium text-gray-800">Phone</div>
@@ -152,8 +152,8 @@ function Contact() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="bg-purple-100 p-3 rounded-full">
-                    <MapPin className="w-6 h-6 text-purple-600" />
+                  <div className="bg-red-100 p-3 rounded-full">
+                    <MapPin className="w-6 h-6 text-red-600" />
                   </div>
                   <div>
                     <div className="font-medium text-gray-800">Location</div>
@@ -162,11 +162,11 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <h4 className="font-serif font-bold text-lg text-gray-800 mb-3">
+              <div className="bg-white/10 p-6 rounded-2xl shadow-lg">
+                <h4 className="font-serif font-bold text-lg text-white mb-3">
                   Response Time
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-gray-400">
                   We typically respond to inquiries within 24 hours. For urgent
                   requests, please call us directly.
                 </p>

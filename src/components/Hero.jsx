@@ -7,6 +7,7 @@ import {
   FilmIcon,
   Music4Icon,
   SlidersIcon,
+  YoutubeIcon,
 } from "lucide-react";
 
 import gsap from "gsap";
@@ -48,13 +49,16 @@ function Hero() {
                 Premium Videography & Photography for Weddings, <br /> Events
                 and More.
               </p>
-              <a
+              <div className="flex justify-between md:w-60 items-center ">
+                <a
                 target="_blank"
                 href="https://www.instagram.com/anurag_video_mixing_zone?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 className=" bg-red-600 hover:bg-red/90 px-4 py-2 md:px-9 md:py-4 text-lg font-semibold rounded-lg shadow-[0_0_15px_#ff0000] transition-all duration-300 hover:shadow-[0_0_30px_#ff0000] hover:scale-105"
               >
                 Get started
               </a>
+              <a href="https://youtube.com/@cinematicvideoclips7445?si=vckNkmznkYM10jc5" target="_blank"><YoutubeIcon className="w-8 h-8 md:w-12 md:h-12 mr-2 bg-red-600 rounded-lg py-1 shadow-[0_0_15px_#ff0000] hover:shadow-[0_0_30px_#ff0000] hover:scale-105 transition-all duration-300"/></a>
+              </div>
             </div>
             <div className="relative inline-block">
               <img

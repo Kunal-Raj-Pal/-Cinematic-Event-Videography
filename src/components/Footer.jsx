@@ -1,5 +1,4 @@
-import React from "react";
-import { Heart, Instagram, Facebook, Youtube, Mail } from "lucide-react";
+import { Instagram,Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -23,6 +22,12 @@ function Footer() {
                   className="bg-gray-700 p-2 rounded-full hover:bg-red-600 transition-colors"
                 >
                   <Instagram className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://youtube.com/@cinematicvideoclips7445?si=vckNkmznkYM10jc5"
+                  className="bg-gray-700 p-2 rounded-full hover:bg-red-600 transition-colors"
+                >
+                  <Youtube className="w-5 h-5" />
                 </a>
               </div>
             </div>

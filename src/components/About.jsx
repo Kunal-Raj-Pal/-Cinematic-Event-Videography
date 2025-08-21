@@ -71,11 +71,11 @@ function About({ dslrRef }) {
                   alt="Professional videographer"
                   className="w-full rounded-2xl shadow-2xl"
                 />
-                <div className="absolute -bottom-7 -right-6 bg-red-600 text-white p-6 rounded-2xl shadow-[0_0_15px_#ff0000]">
+                <div className="absolute -bottom-7 -right-5 md:-right-6 bg-red-600 text-white p-6 rounded-2xl shadow-[0_0_15px_#ff0000]">
                   <div className="font-serif font-bold text-lg">
-                    Anurag Singh
+                    <a href="https://www.instagram.com/anuragsingh619/?utm_source=ig_web_button_share_sheet" target="_blank">@Anurag Singh</a>
                   </div>
-                  <div className="text-sm opacity-90">Lead Videographer</div>
+                  <div className="text-sm opacity-90 text-center">Lead Videographer</div>
                 </div>
               </div>
             </div>

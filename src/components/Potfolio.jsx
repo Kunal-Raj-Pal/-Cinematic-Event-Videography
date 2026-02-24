@@ -2,8 +2,32 @@ import { Heart, Camera } from "lucide-react";
 import Setup from "../assets/img/PortfolioImg/Setup.jpg";
 import Neckless from "../assets/img/PortfolioImg/Neckless.jpg";
 import Watch from "../assets/img/PortfolioImg/Watch.jpg";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { api } from "../api/api";
+import { offlineData } from "./offline";
 
 function Potfolio() {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`${api}/api/projects`);
+        const Data = res.data;
+        // console.log(Data)
+        setProjects(Data);
+        setLoading(false);
+      } catch (error) {
+        console.log("Problem With Server...");
+        setLoading(true);
+        setProjects(offlineData);
+      }
+    };
+    fetchData();
+  }, []);
+
   const portfolioItems = [
     {
       id: 1,
@@ -23,24 +47,6 @@ function Potfolio() {
       service: "Weeding & Events",
     },
   ];
-
-  // useGSAP(()=>{
-  //   let lt = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: portfolioRef.current,
-  //       start:"top 20%",
-  //       end: "bottom 40%",
-  //       scrub:2,
-  //       // markers: true,
-  //     }
-  //   });
-
-  //     lt.to(dslrRef.current,{
-  //       rotate: 372,
-  //       y: "203vh",
-  //     })
-  // });
-
   return (
     <>
       <section id="portfolio" className="py-20">
@@ -54,21 +60,32 @@ function Potfolio() {
               essence of every moment.
             </p>
           </div>
-
+          {/* LoadingAnimationStart */}
+          {loading && (
+            <h3 className="bg-red-600 inline-block p-1 rounded-sm mb-5">
+              Loading...{" "}
+              <div className="border border-3 border-[#f3f3f3] border-t-[#3498db] h-5 w-5 inline-block rounded-full animate-spin"></div>
+            </h3>
+          )}
+          {/* LoadingAnimationEnd */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-            {portfolioItems.map((item) => (
+            {projects.map((item) => (
               <div
-                key={item.id}
+                key={item.pk}
                 className="group cursor-pointer overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 animate-scale-in"
               >
                 <div className="group relative aspect-video overflow-hidden">
                   <img
-                    src={item.thumbnail}
-                    alt={item.title}
+                    src={
+                      loading
+                        ? item.fields.image
+                        : `https://res.cloudinary.com/dpvxrkuzb/${item.fields.image}`
+                    }
+                    alt={item.fields.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 rounded-lg shadow-lg border border-red-500 border md:border-2 "
                   />
                 </div>
-                <p className="text-center py-2">{item.service}</p>
+                <p className="text-center py-2">{item.fields.description}</p>
               </div>
             ))}
           </div>

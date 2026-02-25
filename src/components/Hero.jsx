@@ -44,16 +44,18 @@ function Hero() {
     const fetchData = async () => {
       try {
         const res = await axios.get(`${api}/api/projects`);
-        const Data = res.data;
-        // console.log(Data)
-        setProjects(Data);
-        setLoading(false);
+        setProjects(res.data);
+
       } catch (error) {
         console.log("Problem With Server...");
-        setLoading(true);
         setProjects(offlineData);
+
+      } finally {
+        setLoading(false);
       }
+
     };
+
     fetchData();
   }, []);
 

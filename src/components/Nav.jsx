@@ -13,7 +13,7 @@ function Nav() {
         <div className=" mx-auto sm:px-6 sm:py-4">
           <div className="flex items-center justify-between p-4 sm:p-0">
             <div className="font-serif font-black sm:text-2xl text-red-500">
-              Anurag Video Mixing Zone
+              Anufilms
             </div>
 
             <div className="hidden md:flex items-center gap-8">

@@ -136,7 +136,7 @@ function Contact() {
                   <div>
                     <div className="font-medium text-gray-800">Email</div>
                     <div className="text-gray-600">
-                      anuragvideomixingzonejnp@gm ail.com
+                      anuragvideomixingzonejnp@gmail.com
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,4 @@
-import { Instagram,Youtube } from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -9,7 +9,7 @@ function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
               <div className="font-serif font-black text-2xl mb-4">
-                Anurag Video Mixing Zone
+                Anufilms
               </div>
               <p className="text-gray-300 leading-relaxed mb-6">
                 Crafting cinematic stories that capture the essence of your most
@@ -96,7 +96,7 @@ function Footer() {
         </div>
         <div className="border-t border-gray-700 mt-12 pt-8 text-center p-2">
           <p className="text-gray-400 text-sm items-center justify-center md:gap-2">
-            © 2025 - <span className="font-bold">Anurag Video Mixing Zone</span>
+            © 2025 - <span className="font-bold">Anufilms</span>
             . <br />
             Designed & Developed with ❤️ by{" "}
             <a

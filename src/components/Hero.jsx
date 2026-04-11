@@ -361,7 +361,7 @@ function Hero() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.instagram.com/anurag_video_mixing_zone?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  href="https://www.instagram.com/anuragflims"
                   className="anu-btn-primary"
                   style={{
                     padding: "0.85rem 2.2rem",
